@@ -1,0 +1,7 @@
+template_id = "dbv-blank"
+template_version = "0.1.0"
+created_at = "2026-10-22T03:13:32Z"
+entrypoint = "main.typ"
+
+[fields]
+proyecto = "исит"
