@@ -676,3 +676,21 @@ DevOps — подход, объединяющий разработку и экс
 #v(0.4em)
 7. после запуска отслеживать показатели и корректировать систему.
 Итог: надёжное внедрение требует согласования технологии с процессами и людьми. Отказоустойчивость должна проектироваться заранее, а не добавляться после первого серьёзного сбоя. Ключевые причины неудач — не только технические дефекты, но и неясные цели, слабое участие пользователей, плохие данные и отсутствие управления изменениями.
+#pagebreak()
+#align(center)[#text(weight: "bold", size: 14pt)[Список литературы]]
+#v(0.5em)
+1. ГОСТ 34.003-90. Информационная технология. Комплекс стандартов на автоматизированные системы. Автоматизированные системы. Термины и определения.
+
+2. ГОСТ 34.601-90. Информационная технология. Комплекс стандартов на автоматизированные системы. Автоматизированные системы. Стадии создания.
+
+3. ГОСТ 34.602-89. Информационная технология. Комплекс стандартов на автоматизированные системы. Автоматизированные системы. Техническое задание на создание автоматизированной системы.
+
+4. ISO/IEC/IEEE 12207:2017. *Systems and software engineering — Software life cycle processes*. Geneva: International Organization for Standardization, 2017.
+
+5. Sommerville I. *Software Engineering*. 10th ed. Harlow: Pearson, 2015.
+
+6. Pressman R. S., Maxim B. R. *Software Engineering: A Practitioner’s Approach*. 9th ed. New York: McGraw-Hill Education, 2019.
+
+7. Laudon K. C., Laudon J. P. *Management Information Systems: Managing the Digital Firm*. 16th ed. Harlow: Pearson, 2020.
+
+8. ISO/IEC 25010:2011. Systems and software engineering — *Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*. Geneva: International Organization for Standardization, 2011.
