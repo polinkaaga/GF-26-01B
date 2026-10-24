@@ -67,19 +67,19 @@
 Информационная технология (ИТ) — это совокупность методов, процессов и средств, с помощью которых собирают, обрабатывают, хранят, передают и представляют информацию.
 ИТ описывает, как именно выполняются операции с информацией. Она может включать как цифровые инструменты, так и правила работы с ними.
 Примеры информационных технологий:
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cmt, hanging-indent: 0.5cm)
 - обработка электронных документов;
 #set par(first-line-indent: 1.25cm)
 #set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
 - хранение данных в облаке;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - передача сообщений через интернет;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - создание резервных копий;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - анализ продаж с помощью электронных таблиц.
 #set par(first-line-indent: 1.25cm)
 Например, технология электронного документооборота позволяет создать документ, согласовать его, подписать электронной подписью и передать адресату без печати на бумаге.
@@ -116,16 +116,9 @@
 #set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
 - Соотношение: ИТ — это "инструментарий" и методы, а ИС - это "место" и "контекст", где эти методы применяются для достижения целей бизнеса или управления.
 #set par(first-line-indent: 1.25cm)
-Информационная технология и информационная система связаны, но имеют разные значения:
-Информационная технология: Методы и процессы работы с информацией
-Информационная система: Совокупность ресурсов и правил для решения информационных задач
-Информационная технология: Показывает, как обрабатывается информация
-Информационная система: Показывает, кто и с помощью чего её обрабатывает
-Информационная технология: Может применяться в разных системах
-Информационная система: Обычно включает одну или несколько технологий
-ИТ выступает технологической основой информационной системы. Одна ИС может использовать несколько технологий, например базу данных, облачное хранение и электронный документооборот. При этом одна технология может применяться в разных информационных системах.
+Информационная технология и информационная система связаны, но имеют разные значения. Информационная технология: Методы и процессы работы с информацией. Информационная система: Совокупность ресурсов и правил для решения информационных задач. Информационная технология: Показывает, как обрабатывается информация. Информационная система: Показывает, кто и с помощью чего её обрабатывает. Информационная технология: Может применяться в разных системах. Информационная система: Обычно включает одну или несколько технологий. ИТ выступает технологической основой информационной системы. Одна ИС может использовать несколько технологий, например базу данных, облачное хранение и электронный документооборот. При этом одна технология может применяться в разных информационных системах.
 
-#text(weight: "bold")[ Пример: интернет-магазин ]
+#text(weight: "bold")[ Пример: интернет-магазин. ]
 Информационная система интернет-магазина включает каталог товаров, базу данных заказов, сайт, серверы, сотрудников и правила обработки заказов.
 Внутри этой системы применяются разные информационные технологии:
 #set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
@@ -278,27 +271,27 @@
 DevOps — подход, объединяющий разработку и эксплуатацию. Автоматизация сборки, тестирования и выпуска позволяет регулярно и контролируемо обновлять систему.
 Этот подход особенно полезен для онлайн-сервисов, которые постоянно развиваются. Он не заменяет стадии жизненного цикла, а меняет способ их организации: разработка, тестирование и эксплуатация тесно связаны и выполняются непрерывно.
 
-#text(weight: "bold")[ Как выбрать модель ]
+#text(weight: "bold")[ Как выбрать модель? ]
 При выборе учитывают:
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - стабильность и полноту требований;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - масштаб и сложность системы;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - цену ошибок и уровень рисков;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - необходимость быстро получить первые результаты;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - требования к документации и проверкам;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - частоту изменений;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - зрелость команды и доступность пользователей для обратной связи.
 #set par(first-line-indent: 1.25cm)
 На практике модели часто комбинируют: например, общее планирование ведут поэтапно, а разработку отдельных функций — итерациями.
@@ -314,51 +307,51 @@ DevOps — подход, объединяющий разработку и экс
 
 #text(weight: "bold")[ Анализ требований (Начало цикла) ]
 Эта стадия закладывает фундамент всего проекта. Ошибка на этом этапе обходится дороже всего на последующих стадиях.
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Цель:  Понять бизнес-потребности, ограничения, цели и ожидания заказчика.
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Основные процессы:
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Сбор и выявление: Интервью с пользователями, анализ конкурентов и рынка.
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Спецификация: Документирование требований (создание SRS — Software Requirements Specification).
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Верификация и валидация: Проверка непротиворечивости требований и того, решает ли продукт реальные проблемы.
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Критическая значимость: Нечеткие или меняющиеся без контроля требования приводят к срыву сроков, переработкам и превышению бюджета.
 #set par(first-line-indent: 1.25cm)
 
 #text(weight: "bold")[ Сопровождение и поддержка (Завершающий / цикличный этап) ]
 Эта стадия длится дольше всего — в течение всего срока жизни готового продукта в руках пользователей.
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Цель: Обеспечить непрерывную работоспособность, безопасность и актуальность системы после ее развертывания.
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Виды сопровождения:
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Корректирующее: Исправление дефектов и багов, не замеченных при тестировании.
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Адаптационное: Настройка работы программы под новые операционные системы, версии браузеров или среды.
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Продлевающее (или совершенствующее): Добавление новых функций по запросам пользователей.
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Критическая значимость: Плохо организованная поддержка сводит на нет все усилия команды разработки и приводит к оттоку клиентов.
 #set par(first-line-indent: 1.25cm)
 
 #text(weight: "bold")[ Связь между стадиями ]
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Замкнутый круг: Информация, полученная на стадии сопровождения (обратная связь от пользователей, новые баги, запросы на доработки), возвращается обратно в виде анализа требований для новых итераций или версий продукта.
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - Цена ошибки: Недоработки в анализе порождают лавину проблем в сопровождении
 #set par(first-line-indent: 1.25cm)
 Таким образом, анализ требований задаёт что и зачем нужно создать, а сопровождение обеспечивает, чтобы система продолжала надёжно выполнять эти задачи в меняющихся условиях. Ошибки на первой стадии осложняют разработку и эксплуатацию; недостаточное сопровождение постепенно снижает ценность уже внедрённой системы.
@@ -382,19 +375,19 @@ DevOps — подход, объединяющий разработку и экс
 
 #v(0.4em)
 В общем случае обе системы могут включать следующие компоненты:
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - технические средства: серверы, рабочие станции, датчики, контроллеры, исполнительные механизмы и сети связи;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - программное обеспечение: системные и прикладные программы, алгоритмы обработки данных и управления;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - данные: справочники, оперативные измерения, журналы событий, результаты расчётов;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - пользователи и персонал: операторы, диспетчеры, администраторы, специалисты;
 #set par(first-line-indent: 1.25cm)
-#set par(first-line-indent: 0pt, hanging-indent: 0.5cm)
+#set par(first-line-indent: 1.25cm, hanging-indent: 0.5cm)
 - регламенты и документация: правила работы, инструкции, модели процессов и политики безопасности.
 #set par(first-line-indent: 1.25cm)
 Типовая архитектура АИС
