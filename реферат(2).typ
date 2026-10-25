@@ -676,12 +676,12 @@ DevOps — подход, объединяющий разработку и экс
 
 + ГОСТ 34.602-89. Информационная технология. Комплекс стандартов на автоматизированные системы. Автоматизированные системы. Техническое задание на создание автоматизированной системы.
 
-+ ISO/IEC/IEEE 12207:2017. *Systems and software engineering — Software life cycle processes*. Geneva: International Organization for Standardization, 2017.
++ ISO/IEC/IEEE 12207:2017. «Системная и программная инженерия — процессы жизненного цикла программного обеспечения». Женева: Международная организация по стандартизации, 2017.
 
-+. Sommerville I. *Software Engineering*. 10th ed. Harlow: Pearson, 2015.
++. Соммервилл И. «Программная инженерия». 10‑е изд. Харлоу: Pearson, 2015.
 
-+ Pressman R. S., Maxim B. R. *Software Engineering: A Practitioner’s Approach*. 9th ed. New York: McGraw-Hill Education, 2019.
++ Прессман Р. С., Максим Б. Р. «Программная инженерия: подход практикующего специалиста». 9‑е изд. Нью‑Йорк: McGraw‑Hill Education, 2019.
 
-+ Laudon K. C., Laudon J. P. *Management Information Systems: Managing the Digital Firm*. 16th ed. Harlow: Pearson, 2020.
++ Лаудон К. К., Лаудон Дж. П. «Информационные системы управления: управление цифровой фирмой». 16‑е изд. Харлоу: Pearson, 2020.
 
-+ ISO/IEC 25010:2011. Systems and software engineering — *Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*. Geneva: International Organization for Standardization, 2011.
++ SO/IEC 25010:2011. «Системная и программная инженерия — Требования к качеству и оценка систем и программного обеспечения (SQuaRE) — Модели качества систем и программного обеспечения». Женева: Международная организация по стандартизации, 2011.
