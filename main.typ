@@ -3,7 +3,7 @@
 // ============================================================
 
 // Подключаем шаблон из соседнего файла
-#import "referat/sibfu-template.typ": university-doc, title-page, toc
+#import "sibfu-template.typ": university-doc, title-page, toc
 
 #title-page(
   institute: "Гуманитарный институт",
@@ -14,7 +14,7 @@
   direction-name: "Прикладная информатика",
   program-code: "09.03.03.35",
   program-name: "Прикладная информатика в искусстве и интерактивных медиа",
-  supervisor-role: "ст. преподаватель   ",
+  supervisor-role: " преподаватель   ",
   supervisor-name: "И. Р. Нигматуллин",
   graduate-name: "К. С. Гореликова",
   normcontrol-name: "Д. А. Селезнев",
