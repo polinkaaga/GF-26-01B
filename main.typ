@@ -14,7 +14,7 @@
   direction-name: "Прикладная информатика",
   program-code: "09.03.03.35",
   program-name: "Прикладная информатика в искусстве и интерактивных медиа",
-  supervisor-role: " преподаватель   ",
+  supervisor-role: "ст. преподаватель   ",
   supervisor-name: "И. Р. Нигматуллин",
   graduate-name: "К. С. Гореликова",
   normcontrol-name: "Д. А. Селезнев",
