@@ -50,7 +50,7 @@
 
   #v(1fr)
 
-  #align(center)[Красноярск \ 2026]
+  #align(center)[Красноярск \ 202]
 ]
 
 #show: university-doc.with(
