@@ -23,9 +23,9 @@
   #v(1fr)
 
   #align(center)[
-    #text(size: 20pt, weight: "bold")[РЕФЕРАТ] \
+    #text(size: 14pt, weight: "bold")[РЕФЕРАТ] \
     #v(0.6em)
-    на тему «Информация и её свойства»
+    на тему «Технологии создания и обработки текстовых документов»
   ]
 
   #v(1fr)
@@ -49,7 +49,7 @@
 
   #v(1fr)
 
-  #align(center)[Красноярск \ 2026]
+  #align(center)[Красноярск 2026]
 ]
 
 #show: university-doc.with(
