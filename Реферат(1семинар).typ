@@ -23,7 +23,7 @@
   #v(1fr)
 
   #align(center)[
-    #text(size: 20pt, weight: "bold")[РЕФЕРАТ] \
+    #text(size: 14pt, weight: "bold")[РЕФЕРАТ] \
     #v(0.6em)
     на тему «Информация и её свойства»
   ]
