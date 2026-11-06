@@ -539,33 +539,18 @@ PDF/A представляет собой семейство стандарто�
 // Служебная заметка из исходного текста (в готовую работу не нужна, оставлена на случай, если пригодится):
 // Все источники широко известны и доступны в библиотеках или в интернете. Проверить их можно по названию в каталоге любой библиотеки (например, Российской государственной библиотеки, rsl.ru), на сайте Math-Net.Ru или на сайтах издательств. Перед сдачей работы обязательно сверьте выходные данные (издательство, год, страницы) с первоисточником: они даны без обращения к базам данных.
 
-#strong[Классические работы по теории информации]
+#strong[часть 5-6]
 
-1. Шеннон К. Э. Математическая теория связи (A Mathematical Theory of Communication) \/\/ The Bell System Technical Journal. 1948. Vol. 27. P. 379–423, 623–656.
-2. Хартли Р. В. Л. Передача информации (Transmission of Information) \/\/ The Bell System Technical Journal. 1928. Vol. 7, № 3. P. 535–563.
-3. Колмогоров А. Н. Три подхода к определению понятия «количество информации» \/\/ Проблемы передачи информации. 1965. Т. 1, вып. 1. С. 3–11. (Есть в свободном доступе на Math-Net.Ru.)
-4. Винер Н. Кибернетика, или Управление и связь в животном и машине. 2-е изд. М.: Наука, 1983.
-5. Харкевич А. А. О ценности информации \/\/ Проблемы кибернетики. Вып. 4. М.: Физматгиз, 1960.
-6. Bar-Hillel Y., Carnap R. Semantic Information \/\/ The British Journal for the Philosophy of Science. 1953. Vol. 4, № 14. P. 147–157.
-7. Morris C. W. Foundations of the Theory of Signs. Chicago: University of Chicago Press, 1938.
-8. Урсул А. Д. Природа информации: философский очерк. М.: Политиздат, 1968.
+1.	Jurafsky D., Martin J. H. Speech and Language Processing. 3rd ed. draft. Stanford University. URL: https://web.stanford.edu/~jurafsky/slp3/ 
+2.	Ji Z., Lee N., Frieske R. et al. Survey of Hallucination in Natural Language Generation. ACM Computing Surveys. 2023. DOI: 10.1145/3571730. URL: https://doi.org/10.1145/3571730 
+3.	Manning C. D., Raghavan P., Schütze H. Introduction to Information Retrieval. Cambridge University Press, 2008. URL: https://nlp.stanford.edu/IR-book/ 
+4.	Vaswani A., Shazeer N., Parmar N. et al. Attention Is All You Need. NeurIPS, 2017. URL: https://arxiv.org/abs/1706.03762 
+5.	National Institute of Standards and Technology. Artificial Intelligence Risk Management Framework (AI RMF 1.0): NIST AI 100-1, 2023. URL: https://doi.org/10.6028/NIST.AI.100-1 
+6.	Library of Congress. Recommended Formats Statement: Textual Works, Digital. URL:  https://www.loc.gov/preservation/resources/rfs/text.html 
+7.	National Archives and Records Administration. Appendix A: Tables of File Formats. URL:  https://www.archives.gov/records-mgmt/policy/transfer-guidance-tables.html 
+8.	Library of Congress. PREMIS Data Dictionary for Preservation Metadata. Version 3.0, 2015. URL:  https://www.loc.gov/standards/premis/ 
+9.	Library of Congress. PDF/A Family, PDF for Long-term Preservation. URL:  https://www.loc.gov/preservation/digital/formats/fdd/fdd000318.shtml 
+10.	International Organization for Standardization. ISO 14721:2025. Reference Model for an Open Archival Information System (OAIS). URL: https://www.iso.org/standard/87471.html 
 
-#strong[Учебная литература по информатике]
-
-9. Семакин И. Г., Хеннер Е. К. Информатика и ИКТ. Базовый уровень: учебник для 10–11 классов. М.: БИНОМ. Лаборатория знаний (издания разных лет).
-10. Большая российская энциклопедия, статья «Информация» (электронная версия: bigenc.ru).
-11. Encyclopaedia Britannica, статья «Information theory» (britannica.com).
-
-#strong[История и социология коммуникации]
-
-12. Бриггс А., Берк П. Социальная история медиа: от Гутенберга до Интернета. М.: Дело, 2004.
-13. Маклюэн М. Понимание медиа: внешние расширения человека. М.: Кучково поле, 2003.
-14. Вацлавик П., Бивин Дж., Джексон Д. Прагматика человеческих коммуникаций. М.: Апрель-Пресс, 2000.
-15. Якобсон Р. О. Лингвистика и поэтика \/\/ Структурализм: «за» и «против». М.: Прогресс, 1975.
-
-#strong[Нормативные и справочные материалы]
-
-16. Федеральный закон от 27.07.2006 № 149-ФЗ «Об информации, информационных технологиях и о защите информации», ст. 2 (текст на официальном портале правовой информации: publication.pravo.gov.ru).
-17. Древнерусские берестяные грамоты (сайт gramoty.ru).
 
 
