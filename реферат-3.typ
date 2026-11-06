@@ -475,6 +475,27 @@ PDF/A представляет собой семейство стандарто�
 // Служебная заметка из исходного текста (в готовую работу не нужна, оставлена на случай, если пригодится):
 // Все источники широко известны и доступны в библиотеках или в интернете. Проверить их можно по названию в каталоге любой библиотеки (например, Российской государственной библиотеки, rsl.ru), на сайте Math-Net.Ru или на сайтах издательств. Перед сдачей работы обязательно сверьте выходные данные (издательство, год, страницы) с первоисточником: они даны без обращения к базам данных.
 
+#strong[часть 2-4]
+  1. Rothenberg J. Ensuring the Longevity of Digital Documents // Scientific American. 1995. Vol. 272, No. 1. P. 42–47. 
+
+2. ISO/IEC 26300:2006. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. Geneva: ISO/IEC, 2006. 
+
+3. ECMA-376 / ISO/IEC 29500. Office Open XML File Formats. Geneva: Ecma International, 2006–2012. 
+
+4. ISO 19005-1:2005. Document management — Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). Geneva: ISO, 2005. 
+
+5. ISO 14721:2012. Space data and information transfer systems — Open archival information system (OAIS) reference model. Geneva: ISO, 2012. 
+
+6. ISO 15836-1:2017. Information and documentation — The Dublin Core metadata element set — Part 1: Core elements. Geneva: ISO, 2017. 
+
+7. ГОСТ Р ИСО 15836—2011. Метаданные. Набор элементов данных «Дублинское ядро». М.: Стандартинформ, 2011. 
+
+8. Как устроены файлы? Разбор // Хабр. 2021. URL: https://habr.com/ru/companies/droider/articles/568776/  
+
+9. Скоринкин Д. А. Электронное представление текста с помощью стандарта разметки TEI // Вестник Московского университета. Серия 9. Филология. 2016. № 5. С. 90–108. 
+
+10. TEI P5: Guidelines for Electronic Text Encoding and Interchange / TEI Consortium. URL: https://www.tei-c.org/Guidelines/P5/. 
+
 #strong[часть 3]
 
 1. Язык разметки / Большая российская энциклопедия : [сайт]. — URL: https://bigenc.ru/wiki/Язык_разметки.
