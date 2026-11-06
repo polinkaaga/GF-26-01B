@@ -49,11 +49,10 @@
 
   #v(1fr)
 
-<<<<<<< HEAD:реферат-3.typ
-  #align(center)[Красноярск \ 2026]
-=======
+
+  
   #align(center)[Красноярск 2026]
->>>>>>> 45841017daa2a0d1f7373a0bcce8386fe91d9aa5:Реферат(1семинар).typ
+
 ]
 
 #show: university-doc.with(
