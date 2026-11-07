@@ -23,7 +23,7 @@
   #v(1fr)
 
   #align(center)[
-    #text(size: 20pt, weight: "bold")[Р] \
+    #text(size: 20pt, weight: "bold")[Реферат] \
     #v(0.6em)
     на тему «Информатика и кибернетика как области научного познания»
   ]
