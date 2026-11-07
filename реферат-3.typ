@@ -465,25 +465,25 @@ PDF/A представляет собой семейство стандарто�
   
 #strong[часть 1]
 
-#strong[часть 2 - 4]
-  1. Rothenberg J. Ensuring the Longevity of Digital Documents // Scientific American. 1995. Vol. 272, No. 1. P. 42–47. 
+1. The Unicode Standard: Version 16.0 / Unicode Consortium. — Mountain View: Unicode, Inc., 2024. — URL: https://www.unicode.org/versions/Unicode16.0.0/.
+2. Yergeau F. UTF-8, a transformation format of ISO 10646: RFC 3629. — 2003. — URL: https://www.rfc-editor.org/rfc/rfc3629 (дата обращения: 04.11.2026).
+3. Информационная технология. Наборы 8-битных однобайтовых кодированных графических символов. Часть 5. Латинский/кирилловский алфавит: ГОСТ Р ИСО/МЭК 8859-5-2006. — М.: Стандартинформ, 2006.
+4. Таненбаум Э., Бос Х. Современные операционные системы. — 4-е изд. — СПб.: Питер, 2023. — 1136 с.
+5. Кнут Д. Э. Искусство программирования. Т. 1. Основные алгоритмы. — 3-е изд. — М.: Вильямс, 2019. — 720 с.
+6. Character encoding reference / MDN Web Docs. — URL: https://developer.mozilla.org/en-US/docs/Web/Guides/Writing_systems (дата обращения: 04.11.2026).
+7. Unicode FAQ: Basic questions and facts / Unicode Consortium. — URL: https://www.unicode.org/faq/basic_q.html (дата обращения: 04.11.2026).
+8. Томпсон К., Пайк Р. Plan 9 from Bell Labs: примечания к разработке UTF-8  выступление на USENIX Winter 1993. — URL: https://www.cl.cam.ac.uk/~mgk25/ucs/utf-8-history.txt.
 
+#strong[часть 2, 4]
+  1. Rothenberg J. Ensuring the Longevity of Digital Documents  Scientific American. 1995. Vol. 272, No. 1. P. 42–47. 
 2. ISO/IEC 26300:2006. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. Geneva: ISO/IEC, 2006. 
-
 3. ECMA-376 / ISO/IEC 29500. Office Open XML File Formats. Geneva: Ecma International, 2006–2012. 
-
 4. ISO 19005-1:2005. Document management — Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). Geneva: ISO, 2005. 
-
 5. ISO 14721:2012. Space data and information transfer systems — Open archival information system (OAIS) reference model. Geneva: ISO, 2012. 
-
 6. ISO 15836-1:2017. Information and documentation — The Dublin Core metadata element set — Part 1: Core elements. Geneva: ISO, 2017. 
-
 7. ГОСТ Р ИСО 15836—2011. Метаданные. Набор элементов данных «Дублинское ядро». М.: Стандартинформ, 2011. 
-
-8. Как устроены файлы? Разбор // Хабр. 2021. URL: https://habr.com/ru/companies/droider/articles/568776/  
-
-9. Скоринкин Д. А. Электронное представление текста с помощью стандарта разметки TEI // Вестник Московского университета. Серия 9. Филология. 2016. № 5. С. 90–108. 
-
+8. Как устроены файлы? Разбор  Хабр. 2021. URL: https://habr.com/ru/companies/droider/articles/568776/  
+9. Скоринкин Д. А. Электронное представление текста с помощью стандарта разметки TEI  Вестник Московского университета. Серия 9. Филология. 2016. № 5. С. 90–108. 
 10. TEI P5: Guidelines for Electronic Text Encoding and Interchange / TEI Consortium. URL: https://www.tei-c.org/Guidelines/P5/. 
 
 #strong[часть 3]
@@ -509,11 +509,4 @@ PDF/A представляет собой семейство стандарто�
 7.	National Archives and Records Administration. Appendix A: Tables of File Formats. URL:  https://www.archives.gov/records-mgmt/policy/transfer-guidance-tables.html 
 8.	Library of Congress. PREMIS Data Dictionary for Preservation Metadata. Version 3.0, 2015. URL:  https://www.loc.gov/standards/premis/ 
 9.	Library of Congress. PDF/A Family, PDF for Long-term Preservation. URL:  https://www.loc.gov/preservation/digital/formats/fdd/fdd000318.shtml 
-10.	International Organization for Standardization. ISO 14721:2025. Reference Model for an Open Archival Information System (OAIS). URL: https://www.iso.org/standard/87471.html 
-
-
-
-
-
-
-,
+10.	International Organization for Standardization. ISO 14721:2025. Reference Model for an Open Archival Information System (OAIS). URL: https://www.iso.org/standard/87471.html.
