@@ -465,7 +465,7 @@ PDF/A представляет собой семейство стандарто�
   
 #strong[часть 1]
 
-#strong[ЧАСТЬ 24]
+#strong[часть 2 - 4]
   1. Rothenberg J. Ensuring the Longevity of Digital Documents // Scientific American. 1995. Vol. 272, No. 1. P. 42–47. 
 
 2. ISO/IEC 26300:2006. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. Geneva: ISO/IEC, 2006. 
