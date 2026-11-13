@@ -56,16 +56,8 @@
   year: "2026",
 )
 
-#toc()
+#toc
 #pagebreak(weak: true)
-#line(length: 100%, stroke: 1.5pt + luma(110))
-#v(0.4em)
-
-#heading(numbering: none)[Введение]
-
-#pagebreak(weak: true)
-#align(center, text(size: 10pt, tracking: 2pt, fill: luma(110))[ЧАСТЬ 1 ИЗ 5])
-#line(length: 100%, stroke: 1.5pt + luma(110))
 #v(0.4em)
 
 = 1. Электронная таблица и база данных: границы применимости
