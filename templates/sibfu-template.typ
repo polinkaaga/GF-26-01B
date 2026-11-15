@@ -20,15 +20,26 @@
 // страниц, шрифт, интервалы, абзацные отступы, вид заголовков,
 // новую страницу для каждого раздела, оформление списков и таблиц.
 //
+// Необязательные параметры (в скобках — значение по умолчанию):
+//   doc-kind ("РЕФЕРАТ")      — вид работы на титуле: "ДОКЛАД", "КУРСОВАЯ РАБОТА" и т. д.
+//   topic-prefix ("на тему")  — подпись перед темой; "" — без неё
+//   institute, department, direction, program — данные института и программы
+//   city ("Красноярск"), year ("2026")
+//   show-outline (true)       — false: без содержания
+//   outline-depth (1)         — 2: в содержание попадают и подразделы
+//   first-numbered-page (3)   — с какой страницы показывать номер
+//   font-size (14pt)
+//
 // Нужен Typst 0.13 или новее.
 // ============================================================
 
-#let serif-fonts = ("Times New Roman", "Liberation Serif", "Tinos")
+#let serif-fonts = "Times New Roman"
 
 // ---------- Титульный лист ----------
 #let title-page(
   doc-kind,
   title,
+  topic-prefix,
   institute,
   department,
   direction,
@@ -58,7 +69,7 @@
   #align(center)[
     #text(size: 20pt, weight: "bold")[#doc-kind] \
     #v(0.6em)
-    на тему «#title»
+    #if topic-prefix != "" [#topic-prefix «#title»] else [«#title»]
   ]
 
   #v(1fr)
@@ -102,16 +113,19 @@
   program: "09.03.03.35 Прикладная информатика в искусстве и интерактивных медиа",
   city: "Красноярск",
   year: "2026",
+  topic-prefix: "на тему", // подпись перед темой на титуле; "" — без неё
+  font-size: 14pt,
+  show-outline: true,     // false — без содержания
   outline-depth: 1,       // сколько уровней заголовков попадает в содержание
   first-numbered-page: 3, // с какой страницы показывать номер (титул = 1, содержание = 2)
   body,
 ) = {
   set document(title: title, author: authors)
-  set text(font: serif-fonts, size: 14pt, lang: "ru", hyphenate: false)
+  set text(font: serif-fonts, size: font-size, lang: "ru", hyphenate: false)
 
   // 1. Титульный лист (без номера страницы, но считается первой)
   title-page(
-    doc-kind, title, institute, department, direction, program,
+    doc-kind, title, topic-prefix, institute, department, direction, program,
     authors, supervisor-title, supervisor, city, year,
   )
 
@@ -164,10 +178,13 @@
   show table: set par(first-line-indent: 0pt, justify: false, leading: 0.5em, spacing: 0.5em)
 
   // 7. Содержание: без абзацного отступа, подпункты сдвинуты, номер страницы справа
-  set outline(indent: 0.65cm, fill: none)
+  //    (заполнитель-точки остаются стандартными)
+  set outline(indent: 0.65cm)
   show outline: set par(first-line-indent: 0pt, justify: false, leading: 0.4em, spacing: 0.4em)
   show outline: set block(spacing: 0.4em)
-  outline(title: [Содержание], depth: outline-depth)
+  if show-outline {
+    outline(title: [Содержание], depth: outline-depth)
+  }
 
   // 8. Сам текст работы
   body
