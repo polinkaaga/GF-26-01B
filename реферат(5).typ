@@ -1,4 +1,4 @@
-#import "sibfu-template.typ": university-doc, toc
+#import "templates/sibfu-template.typ": university-doc, toc
 
 #page(numbering: none, margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm))[
   #set text(font: "Times New Roman", size: 14pt, lang: "ru", hyphenate: false)

@@ -1,4 +1,4 @@
-#import "sibfu-template.typ": university-doc, toc
+#import "templates/sibfu-template.typ": university-doc, toc
 
 #page(paper: "a4",numbering: none, margin: (left: 3cm, right: 1cm, top: 2cm, bottom: 2cm))[
   #set text(font: "PT Serif", size: 14pt, lang: "ru", hyphenate: false)

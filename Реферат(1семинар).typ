@@ -3,7 +3,7 @@
 // ============================================================
 
 // Подключаем шаблон из соседнего файла
-#import "sibfu-template.typ": university-doc, toc
+#import "templates/sibfu-template.typ": university-doc, toc
 
 // ---------- Титульный лист реферата (без блоков «Выпускник» и «Утверждаю») ----------
 #page(numbering: none, margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm))[
