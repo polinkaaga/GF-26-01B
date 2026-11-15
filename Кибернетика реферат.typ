@@ -1,14 +1,21 @@
-// ============================================================
-// main.typ — реферат «Информатика и кибернетика как области научного познания»
-// ============================================================
+#import "templates/sibfu-template.typ": university-doc, toc
 
-// Подключаем шаблон из соседнего файла
-#import "sibfu-template.typ": university-doc, toc
-
-// ---------- Титульный лист реферата (без блоков «Выпускник» и «Утверждаю») ----------
-#page(numbering: none, margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm))[
-  #set text(font: "Times New Roman", size: 14pt, lang: "ru", hyphenate: false)
-  #set par(justify: false, first-line-indent: 0pt, leading: 0.65em)
+// ---------- Титульный лист реферата ----------
+#page(
+  numbering: none,
+  margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm)
+)[
+  #set text(
+    font: "Times New Roman",
+    size: 14pt,
+    lang: "ru",
+    hyphenate: false
+  )
+  #set par(
+    justify: false,
+    first-line-indent: 0pt,
+    leading: 0.65em
+  )
 
   #align(center)[
     МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ \
@@ -27,6 +34,8 @@
     #v(0.6em)
     на тему «Информатика и кибернетика как области научного познания»
   ]
+]
+
 
   #v(1fr)
 
