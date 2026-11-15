@@ -1,278 +1,221 @@
 // ============================================================
-// template.typ — Шаблон по СТО 7.5-07–2021
-// Версия Typst: 0.14.2
+// sibfu-template.typ — шаблон оформления учебных работ СФУ
+//
+// Подключение в основном файле:
+//
+//   #import "sibfu-template.typ": university-doc
+//   #show: university-doc.with(
+//     title: "Тема работы",
+//     authors: ("И. О. Фамилия",),
+//     supervisor-title: "ст. преподаватель",
+//     supervisor: "И. О. Фамилия",
+//   )
+//
+// После этого в основном файле остаётся только текст:
+//   = Заголовок раздела            (нумеруется: «1 ЗАГОЛОВОК РАЗДЕЛА»)
+//   == Заголовок подраздела        (нумеруется: «1.1 Заголовок подраздела»)
+//   #heading(numbering: none)[Введение]   (раздел без номера)
+//
+// Шаблон сам делает: титульный лист, содержание, поля, нумерацию
+// страниц, шрифт, интервалы, абзацные отступы, вид заголовков,
+// новую страницу для каждого раздела, оформление списков и таблиц.
+//
+// Необязательные параметры (в скобках — значение по умолчанию):
+//   doc-kind ("РЕФЕРАТ")      — вид работы на титуле: "ДОКЛАД", "КУРСОВАЯ РАБОТА" и т. д.
+//   topic-prefix ("на тему")  — подпись перед темой; "" — без неё
+//   institute, department, direction, program — данные института и программы
+//   city ("Красноярск"), year ("2026")
+//   show-outline (true)       — false: без содержания
+//   outline-depth (1)         — 2: в содержание попадают и подразделы
+//   first-numbered-page (3)   — с какой страницы показывать номер
+//   font-size (14pt)
+//
+// Нужен Typst 0.13 или новее.
 // ============================================================
 
-// Главная функция-шаблон. Принимает метаданные и тело документа.
-#let university-doc(
-  title: "Название документа",
-  author: "",
-  department: "",
-  year: "2026",
-  doc,          // ← это тело документа, всегда последним
-) = {
+#let serif-fonts = "Times New Roman"
 
-  // ── 1. НАСТРОЙКИ СТРАНИЦЫ ─────────────────────────────────
-  // Раздел 7.1.1: формат А4 (210×297 мм), поля в мм
-  set page(
-    paper: "a4",
-    margin: (
-      top:    20mm,  // верхнее поле: 20 мм  (7.1.2)
-      bottom: 20mm,  // нижнее поле: 20 мм   (7.1.2)
-      left:   30mm,  // левое поле: 30 мм    (7.1.2, для переплёта)
-      right:  10mm,  // правое поле: 10 мм   (7.1.2)
-    ),
-    // Нумерация страниц — внизу по центру (7.1.3)
-    numbering: "1",
-    number-align: center + bottom,
-  )
-
-  // ── 2. ОСНОВНОЙ ТЕКСТ ─────────────────────────────────────
-  // Раздел 7.1.1: шрифт Times New Roman 14 пт, межстрочный 1.5
-  set text(
-    font: "PT Serif",
-    size: 14pt,
-    lang: "ru",
-    hyphenate: false,
-  )
-
-  // Межстрочный интервал 1.5 (7.1.1)
-  set par(
-    leading: 1.5em,        // межстрочный интервал
-    first-line-indent: 12.5mm,  // красная строка 12.5 мм (7.1.1)
-    justify: true,         // выравнивание по ширине (7.1.1)
-  )
-
-  // ── 3. ЗАГОЛОВКИ ──────────────────────────────────────────
-  // Раздел 7.4: нумерованные разделы
-  // Уровень 1 (раздел): жирный, по центру, 14 пт
-  show heading.where(level: 1): it => {
-    set text(size: 14pt, weight: "bold")
-    set align(center)
-    set par(first-line-indent: 0mm)
-    v(1em)           // отступ перед заголовком
-    upper(it.body)
-    v(0.5em)         // отступ после заголовка
-  }
-
-  // Уровень 2 (подраздел): жирный, от левого края
-  show heading.where(level: 2): it => {
-    set text(size: 14pt, weight: "bold")
-    set par(first-line-indent: 0mm)
-    v(0.75em)
-    it.body
-    v(0.5em)
-  }
-
-  // Уровень 3 (пункт): жирный курсив, от левого края
-  show heading.where(level: 3): it => {
-    set text(size: 14pt, weight: "bold", style: "italic")
-    set par(first-line-indent: 0mm)
-    v(0.5em)
-    it.body
-    v(0.25em)
-  }
-
-  // Нумерация заголовков (раздел 7.4.2: 1, 1.1, 1.1.1)
-  set heading(numbering: "1.1.1")
-
-  // ── 4. РИСУНКИ ────────────────────────────────────────────
-  // Раздел 7.5: подпись «Рисунок Х — Название», по центру
-  show figure.where(kind: image): it => {
-    set align(center)
-    it.body
-    v(0.3em)
-    set text(size: 14pt)
-    [Рисунок #it.counter.display() — #it.caption.body]
-  }
-
-  // ── 5. ТАБЛИЦЫ ────────────────────────────────────────────
-  // Раздел 7.7: «Таблица Х — Название» над таблицей, слева
-  show figure.where(kind: table): it => {
-    set align(left)
-    set text(size: 14pt)
-    [Таблица #it.counter.display() — #it.caption.body]
-    v(0.3em)
-    it.body
-  }
-
-  // ── 6. СПИСОК ЛИТЕРАТУРЫ ──────────────────────────────────
-  // ГОСТ Р 7.0.100–2018 (раздел 2 стандарта)
-  set bibliography(style: "gost-r-7-0-5-2008-numeric.csl")
-
-// Нумерованный список: 1) 2) 3)
-set enum(
-  numbering: "1.",        // формат номера
-  indent: 12.5mm,         // отступ = красная строка
-  body-indent: 5mm,       // отступ текста от номера
+// ---------- Вспомогательные блоки для текста работы ----------
+// Прямоугольник для схем внутри #figure(grid(...)):  node[Текст], node(w: 230pt)[Текст]
+#let node(body, w: auto) = box(
+  width: w,
+  inset: (x: 6pt, y: 5pt),
+  stroke: 0.7pt,
+  radius: 3pt,
+  align(center + horizon, text(size: 11pt, body)),
 )
 
-// Маркированный список (для полноты)
-set list(
-  indent: 12.5mm,
-  body-indent: 5mm,
-  marker: "–",            // тире по ГОСТ
-)
+// Рамка с пометкой (например, «Для презентации»): #note[Текст]
+#let note(body) = block(
+  width: 100%,
+  inset: 8pt,
+  stroke: 0.6pt + luma(120),
+  radius: 2pt,
+  breakable: false,
+)[
+  #set par(first-line-indent: 0pt, justify: false, leading: 0.65em)
+  #set text(size: 12pt)
+  #body
+]
 
-// ── 7. ОСНОВНОЕ СОДЕРЖИМОЕ ДОКУМЕНТА ─────────────────────
-  doc
-}
-
+// ---------- Титульный лист ----------
 #let title-page(
-    font: "PT Serif", 
-  ministry: "Министерство науки и высшего образования РФ",
-  university: "«СИБИРСКИЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ»",
-  institute: "",
-  department: "",
-  approve-title: "УТВЕРЖДАЮ",
-  approve-role: "Заведующий кафедрой",
-  approve-name: "",
-  approve-year: "2026",
-  work-type: "БАКАЛАВРСКАЯ РАБОТА",
-  work-topic: "",
-  practice-place: "",
-  direction-code: "",
-  direction-name: "",
-  program-code: "",
-  program-name: "",
-  supervisor-role: "",
-  supervisor-name: "",
-  graduate-name: "",
-  consultant-role: "",
-  consultant-name: "",
-  normcontrol-name: "",
-  reviewer-name: "",
-  city: "Красноярск",
-  year: "2026",
-) = {
-  set text(size: 14pt, font: font)   // ← добавить font: font
-  set page(
-    numbering: none,
-    paper: "a4",
-    margin: (
-      top:    20mm,  // верхнее поле: 20 мм  (7.1.2)
-      bottom: 20mm,  // нижнее поле: 20 мм   (7.1.2)
-      left:   30mm,  // левое поле: 30 мм    (7.1.2, для переплёта)
-      right:  10mm,  // правое поле: 10 мм   (7.1.2)
-    ),
-    footer: align(center, text(size: 14pt)[#city #year]),
-  )
+  doc-kind,
+  title,
+  topic-prefix,
+  institute,
+  department,
+  direction,
+  program,
+  authors,
+  supervisor-title,
+  supervisor,
+  city,
+  year,
+) = page(
+  numbering: none,
+  margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm),
+)[
+  #set par(justify: false, first-line-indent: 0pt, leading: 0.65em, spacing: 0.65em)
 
-  // ── 1. ШАПКА ───────────────────────────────────────────────
-  align(center)[
-    #ministry \
-    Федеральное государственное автономное \
-    образовательное учреждение высшего образования \
-    *#university* \
-    #if institute != "" [#institute \ ]
-    #if department != "" [#department]
+  #align(center)[
+    МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ \
+    РОССИЙСКОЙ ФЕДЕРАЦИИ \
+    Федеральное государственное автономное образовательное учреждение высшего образования \
+    *«СИБИРСКИЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ»* \
+    #institute \
+    #department
   ]
 
-  v(1em)
+  #v(1fr)
 
-     // ── 2. ГРИФ УТВЕРЖДЕНИЯ ────────────────────────────────────
-  // Левая пустая колонка растягивается, правая — фиксирована
-  grid(
-    columns: (1fr, 180pt),
-    [],
-    [
-      *#approve-title* \
-      #approve-role \
-      #v(4pt)
-      #box(width: 55pt, line(length: 55pt, stroke: 0.5pt)) #approve-name \
-      #v(4pt)
-      «\_\_\_\_» \_\_\_\_\_\_\_\_\_ #approve-year г.
-    ],
-  )
-  
-  v(2em)
+  #align(center)[
+    #text(size: 20pt, weight: "bold")[#doc-kind] \
+    #v(0.6em)
+    #if topic-prefix != "" [#topic-prefix «#title»] else [«#title»]
+  ]
 
-  // ── 3. ЦЕНТРАЛЬНЫЙ БЛОК ────────────────────────────────────
-  align(center)[
-    *#upper(work-type)*
-    #v(0.5em)
-    #work-topic
-    #if practice-place != "" [
-      #v(0.5em)
-      #practice-place
+  #v(1fr)
+
+  Направление подготовки: #direction \
+  Образовательная программа: #program
+
+  #v(2em)
+
+  #align(right)[
+    #block(width: 55%)[
+      #set align(left)
+      #if authors.len() > 0 [
+        *#if authors.len() > 1 [Выполнили:] else [Выполнил:]* \
+        #authors.join(linebreak())
+      ]
+      #if supervisor != "" [
+        #v(1em)
+        *Проверил:* \
+        #supervisor-title \
+        #supervisor
+      ]
     ]
   ]
 
-  v(1em)
+  #v(1fr)
 
-  // ── 4. НАПРАВЛЕНИЕ ПОДГОТОВКИ (если ВКР) ──────────────────
-  if direction-code != "" {
-    v(0.5em)
-    table(
-      columns: (auto, auto, 1fr),
-      stroke: none,
-      inset: (x: 6pt, y: 8pt),   // ← воздух между строками
-      align: (left, left, left),
-      [Направление подготовки:],  [#direction-code], [#direction-name],
-      [Наименование программы:],  [#program-code],   [#program-name],
-    )
-  }
+  #align(center)[#city \ #year]
+]
 
-   // ── 5. БЛОК ПОДПИСЕЙ ──────────────────────────────────────
-  place(bottom,
-    block(
-      width: 100%,
-      inset: (bottom: 24pt),
-      {
-        // Собираем строки вручную только для заполненных полей
-        let rows = ()
-        rows.push(([Руководитель], [#supervisor-role], [#h(8pt)#supervisor-name]))
-        rows.push(([Выпускник], [], [#h(8pt)#graduate-name]))
-        if consultant-name != "" {
-          rows.push(([Консультанты], [#consultant-role], [#h(8pt)#consultant-name]))
-        }
-        if normcontrol-name != "" {
-          rows.push(([Нормоконтролёр], [], [#h(8pt)#normcontrol-name]))
-        }
-        if reviewer-name != "" {
-          rows.push(([Рецензент], [], [#h(8pt)#reviewer-name]))
-        }
+// ---------- Основная функция шаблона ----------
+#let university-doc(
+  title: "",
+  doc-kind: "РЕФЕРАТ",
+  authors: (),
+  supervisor-title: "",
+  supervisor: "",
+  institute: "Гуманитарный институт",
+  department: "Кафедра информационных технологий в креативных и культурных индустриях",
+  direction: "09.03.03 Прикладная информатика",
+  program: "09.03.03.35 Прикладная информатика в искусстве и интерактивных медиа",
+  city: "Красноярск",
+  year: "2026",
+  topic-prefix: "на тему", // подпись перед темой на титуле; "" — без неё
+  font-size: 14pt,
+  show-outline: true,     // false — без содержания
+  outline-depth: 1,       // сколько уровней заголовков попадает в содержание
+  first-numbered-page: 3, // с какой страницы показывать номер (титул = 1, содержание = 2)
+  body,
+) = {
+  set document(title: title, author: authors)
+  set text(font: serif-fonts, size: font-size, lang: "ru", hyphenate: false)
 
-        table(
-          columns: (1fr, 1fr, 1fr),
-          stroke: none,
-          align: (left, right, left),
-          inset: (x: 0pt, y: 8pt),
-          ..rows.flatten(),
-        )
+  // 1. Титульный лист (без номера страницы, но считается первой)
+  title-page(
+    doc-kind, title, topic-prefix, institute, department, direction, program,
+    authors, supervisor-title, supervisor, city, year,
+  )
+
+  // 2. Поля и нумерация остальных страниц: слева 3 см, справа 1 см, сверху и снизу 2 см
+  set page(
+    margin: (left: 3cm, right: 1cm, top: 2cm, bottom: 2cm),
+    numbering: "1",
+    footer: context {
+      let n = counter(page).get().first()
+      if n >= first-numbered-page {
+        align(center, counter(page).display("1"))
       }
-    )
-  )
-}
-
-#let toc() = {
-  // Принудительно одинарный интервал для всего содержания
-  set par(leading: 0.65em)
-  set block(spacing: 0.65em)  // убирает лишние отступы между строками
-
-  align(center, text(weight: "bold")[СОДЕРЖАНИЕ])
-  v(1em)
-
-  show outline.entry.where(level: 1): it => {
-    set text(weight: "regular")
-    it
-  }
-
-  show outline.entry.where(level: 2): it => {
-    set text(weight: "regular")
-    pad(left: 4pt, it)
-  }
-
-  show outline.entry.where(level: 3): it => {
-    set text(weight: "regular")
-    pad(left: 8pt, it)
-  }
-
-  outline(
-    title: none,
-    indent: 0pt,
-    depth: 3,
+    },
   )
 
-  pagebreak()
+  // 3. Основной текст: абзацный отступ 1,25 см (в том числе после заголовка),
+  //    интервал 1,5, выравнивание по ширине, пустых строк между абзацами нет
+  set par(
+    justify: true,
+    first-line-indent: (amount: 1.25cm, all: true),
+    leading: 0.6em,
+    spacing: 0.6em,
+  )
+
+  // 4. Заголовки: по центру, жирные, без абзацного отступа,
+  //    одна пустая строка до и после. Раздел (уровень 1) — с новой страницы и ПРОПИСНЫМИ.
+  set heading(numbering: "1.1")
+  show heading: it => {
+    let number = if it.numbering != none {
+      [#counter(heading).display(it.numbering)#h(0.3em)]
+    }
+    let heading-text = if it.level == 1 { upper(it.body) } else { it.body }
+    if it.level == 1 { pagebreak(weak: true) }
+    block(width: 100%, above: 2.3em, below: 2.3em, sticky: true)[
+      #set par(first-line-indent: 0pt, justify: false, leading: 0.6em)
+      #set align(center)
+      #set text(weight: "bold")
+      #number#heading-text
+    ]
+  }
+
+  // 5. Списки: маркер на уровне абзацного отступа, внутри пунктов отступ не нужен
+  set list(indent: 1.25cm, body-indent: 0.6em)
+  set enum(indent: 1.25cm, body-indent: 0.6em)
+  show list: set par(first-line-indent: 0pt)
+  show enum: set par(first-line-indent: 0pt)
+
+  // 6. Таблицы: без абзацного отступа, плотнее, текст по левому краю
+  set table(inset: 6pt, align: left)
+  show table: set par(first-line-indent: 0pt, justify: false, leading: 0.5em, spacing: 0.5em)
+  show table: set text(size: 12pt)
+
+  // 6а. Рисунки и таблицы с подписями: «Рисунок 1 – Название» под рисунком,
+  //     «Таблица 1 – Название» над таблицей; абзацного отступа внутри нет
+  set figure.caption(separator: " – ")
+  show figure.where(kind: table): set figure.caption(position: top)
+  show figure: set par(first-line-indent: 0pt, justify: false, leading: 0.65em)
+
+  // 7. Содержание: без абзацного отступа, подпункты сдвинуты, номер страницы справа
+  //    (заполнитель-точки остаются стандартными)
+  set outline(indent: 0.65cm)
+  show outline: set par(first-line-indent: 0pt, justify: false, leading: 0.4em, spacing: 0.4em)
+  show outline: set block(spacing: 0.4em)
+  if show-outline {
+    outline(title: [Содержание], depth: outline-depth)
+  }
+
+  // 8. Сам текст работы
+  body
 }
