@@ -35,6 +35,29 @@
 
 #let serif-fonts = "Times New Roman"
 
+// ---------- Вспомогательные блоки для текста работы ----------
+// Прямоугольник для схем внутри #figure(grid(...)):  node[Текст], node(w: 230pt)[Текст]
+#let node(body, w: auto) = box(
+  width: w,
+  inset: (x: 6pt, y: 5pt),
+  stroke: 0.7pt,
+  radius: 3pt,
+  align(center + horizon, text(size: 11pt, body)),
+)
+
+// Рамка с пометкой (например, «Для презентации»): #note[Текст]
+#let note(body) = block(
+  width: 100%,
+  inset: 8pt,
+  stroke: 0.6pt + luma(120),
+  radius: 2pt,
+  breakable: false,
+)[
+  #set par(first-line-indent: 0pt, justify: false, leading: 0.65em)
+  #set text(size: 12pt)
+  #body
+]
+
 // ---------- Титульный лист ----------
 #let title-page(
   doc-kind,
@@ -176,6 +199,13 @@
   // 6. Таблицы: без абзацного отступа, плотнее, текст по левому краю
   set table(inset: 6pt, align: left)
   show table: set par(first-line-indent: 0pt, justify: false, leading: 0.5em, spacing: 0.5em)
+  show table: set text(size: 12pt)
+
+  // 6а. Рисунки и таблицы с подписями: «Рисунок 1 – Название» под рисунком,
+  //     «Таблица 1 – Название» над таблицей; абзацного отступа внутри нет
+  set figure.caption(separator: " – ")
+  show figure.where(kind: table): set figure.caption(position: top)
+  show figure: set par(first-line-indent: 0pt, justify: false, leading: 0.65em)
 
   // 7. Содержание: без абзацного отступа, подпункты сдвинуты, номер страницы справа
   //    (заполнитель-точки остаются стандартными)
