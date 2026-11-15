@@ -1,4 +1,4 @@
-#import "sibfu-template.typ": university-doc, toc
+#import "/templates/sibfu-template.typ": university-doc, toc
 #set page(
   paper: "a4",
   margin: (left: 3cm, right: 1cm, top: 2cm, bottom: 2cm),
