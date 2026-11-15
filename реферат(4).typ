@@ -3,7 +3,7 @@
 // ============================================================
 
 // Подключаем шаблон из соседнего файла
-#import "sibfu-template.typ": university-doc, title-page, toc
+#import "sibfu-referat-template.typ": university-doc, title-page, toc
 
 #title-page(
   institute: "Гуманитарный институт",
