@@ -1,5 +1,5 @@
 // Реферат: Табличные данные и базы данных. Только текст и разметка; оформление — в шаблоне.
-#import "/templates/sibfu-template.typ": university-doc
+#import "../templates/sibfu-template.typ": university-doc
 
 #show: university-doc.with(
   title: "Табличные данные и базы данных (реляционные и нереляционные, СУБД)",

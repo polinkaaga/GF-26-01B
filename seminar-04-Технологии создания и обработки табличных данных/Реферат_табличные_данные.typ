@@ -1,6 +1,6 @@
 // Реферат: Технологии создания и обработки табличных данных.
 // Только текст и разметка; всё оформление — в шаблоне.
-#import "/templates/sibfu-template.typ": university-doc
+#import "../templates/sibfu-template.typ": university-doc
 
 #show: university-doc.with(
   title: "Технологии создания и обработки табличных данных",
