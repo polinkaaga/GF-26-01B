@@ -1,4 +1,4 @@
-#import "sibfu-template.typ": university-doc
+#import "../templates/sibfu-template.typ": university-doc
 
 #show: university-doc.with(
   title: "Технологии создания и обработки графических данных",
