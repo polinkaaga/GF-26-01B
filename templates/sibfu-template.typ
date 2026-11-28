@@ -202,7 +202,7 @@
       [#counter(heading).display(it.numbering)#h(0.3em)]
     }
     let heading-text = if it.level == 1 { upper(it.body) } else { it.body }
-    let indent = if it.outlined { 1.25cm } else { 0pt }
+    let indent = if it.numbering != none { 1.25cm } else { 0pt }
     if it.level == 1 { pagebreak(weak: true) }
     block(width: 100%, above: 2.3em, below: 2.3em, sticky: true)[
       #set par(first-line-indent: (amount: indent, all: true), justify: false, leading: 0.6em)
