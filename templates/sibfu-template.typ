@@ -74,10 +74,12 @@
   supervisor,
   city,
   year,
+  font-size,
 ) = page(
   numbering: none,
   margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm),
 )[
+  #set text(size: font-size)
   #set par(justify: false, first-line-indent: 0pt, leading: 0.65em, spacing: 0.65em)
 
   #align(center)[
@@ -92,32 +94,9 @@
   #v(1fr)
 
   #align(center)[
-    #text(size: 20pt, weight: "bold")[#doc-kind] \
+    #text(size: 14pt, weight: "bold")[#doc-kind] \
     #v(0.6em)
     #if topic-prefix != "" [#topic-prefix «#title»] else [«#title»]
-  ]
-
-  #v(1fr)
-
-  Направление подготовки: #direction \
-  Образовательная программа: #program
-
-  #v(2em)
-
-  #align(right)[
-    #block(width: 55%)[
-      #set align(left)
-      #if authors.len() > 0 [
-        *#if authors.len() > 1 [Выполнили:] else [Выполнил:]* \
-        #authors.join(linebreak())
-      ]
-      #if supervisor != "" [
-        #v(1em)
-        *Проверил:* \
-        #supervisor-title \
-        #supervisor
-      ]
-    ]
   ]
 
   #v(1fr)
@@ -128,11 +107,13 @@
 // ---------- Содержание ----------
 // Своё, а не стандартный outline(): точки-заполнители до номера страницы, номер прижат
 // к правому краю, подразделы сдвинуты на 0,65 см, интервал одинарный, как в образце.
-#let toc(depth: 2) = context {
+#let toc(depth: 2, font-size: 14pt) = context {
+  set text(size: font-size)
   set par(first-line-indent: 0pt, justify: false, leading: 0.5em, spacing: 0.5em)
   let entries = query(heading.where(outlined: true)).filter(hd => hd.level <= depth)
 
-  for (i, hd) in entries.enumerate() {
+  for i in range(entries.len()) {
+    let hd = entries.at(i)
     let loc = hd.location()
     let current-page = counter(page).at(loc).first()
     let previous-page = if i > 0 {
@@ -175,7 +156,7 @@
   // 1. Титульный лист (без номера страницы, но считается первой)
   title-page(
     doc-kind, title, topic-prefix, institute, department, direction, program,
-    authors, supervisor-title, supervisor, city, year,
+    authors, supervisor-title, supervisor, city, year, font-size,
   )
 
   // 2. Поля: слева 3 см, справа 1 см, сверху и снизу 2 см.
@@ -214,7 +195,7 @@
     block(width: 100%, above: 2.3em, below: 2.3em, sticky: true)[
       #set par(first-line-indent: (amount: indent, all: true), justify: false, leading: 0.6em)
       #set align(center)
-      #set text(weight: "bold")
+      #set text(size: font-size, weight: "bold")
       #number#heading-text
     ]
   }
@@ -242,7 +223,7 @@
   // 7. Содержание
   if show-outline {
     heading(numbering: none, outlined: false)[Содержание]
-    toc(depth: outline-depth)
+    toc(depth: outline-depth, font-size: font-size)
   }
 
   // 8. Сам текст работы
