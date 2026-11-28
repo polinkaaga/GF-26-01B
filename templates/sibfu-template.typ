@@ -131,9 +131,16 @@
 #let toc(depth: 2) = context {
   set par(first-line-indent: 0pt, justify: false, leading: 0.5em, spacing: 0.5em)
   let entries = query(heading.where(outlined: true)).filter(hd => hd.level <= depth)
-  for hd in entries {
+
+  for (i, hd) in entries.enumerate() {
     let loc = hd.location()
-    let page-no = str(counter(page).at(loc).first())
+    let current-page = counter(page).at(loc).first()
+    let previous-page = if i > 0 {
+      counter(page).at(entries.at(i - 1).location()).first()
+    } else {
+      none
+    }
+    let page-no = if current-page != previous-page { str(current-page) } else { "" }
     let number = if hd.numbering != none {
       [#numbering(hd.numbering, ..counter(heading).at(loc))#h(0.4em)]
     }
